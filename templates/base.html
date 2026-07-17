@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AuthentiKit Sudan{% endblock %}</title>
+    <!-- استدعاء ملف التنسيق العام المشترك -->
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    <!-- 1. الهيدر المشترك (Navbar) -->
+    <header class="main-navbar">
+        <div class="nav-container">
+            <a href="{% url 'home' %}" class="brand-logo">AuthentiKit Sudan</a>
+            <nav class="nav-links">
+                <a href="#">Verify</a>
+                <a href="#">Products</a>
+                <a href="#">Warranty</a>
+                <a href="#">Support</a>
+            </nav>
+            <div class="nav-actions">
+                <span class="lang-switch">Arabic</span>
+                <a href="{% url 'signin' %}" class="btn-signin-nav">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. المحتوى المتغير بتغير الصفحات -->
+    <main class="main-content">
+        {% block content %}
+        <!-- الصفحات الابنة ستضع محتواها هنا -->
+        {% endblock %}
+    </main>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
