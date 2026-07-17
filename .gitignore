@@ -1,0 +1,41 @@
+# ==========================================
+# AuthentiKit Project - Official .gitignore
+# ==========================================
+
+# 1. Python Virtual Environments (Crucial to block huge local packages)
+.venv/
+venv/
+ENV/
+env/
+ENV/
+bin/
+lib/
+include/
+
+# 2. Local SQLite Database (Prevents wiping out each other's test data)
+*.sqlite3
+db.sqlite3
+
+# 3. Python Cache and Compiled files (Temporary system files)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 4. IDE and Code Editors Settings (Personal workspace preferences)
+# PyCharm / WebStorm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# 5. OS Generated Files & Security (Local configuration files)
+.env
+.env.local
+.DS_Store
+Thumbs.db
+desktop.ini
