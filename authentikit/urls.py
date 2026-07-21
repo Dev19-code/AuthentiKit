@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # توجيه الروابط إلى الـ Apps المنفصلة
-    #path('', include('core_app.urls')),                  # الواجهة والرئيسية ()
+    path('', include('core_app.urls')),                  # الواجهة والرئيسية ()
     #path('accounts/', include('accounts_app.urls')),      # تسجيل الدخول ()
     #path('store/', include('store_app.urls')),            # المتجر والسلة ()
     #path('dashboard/', include('custom_admin_app.urls')), # لوحة التحكم المخصصة
