@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}AuthentiKit Sudan - الرئيسية{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'core_app/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>AuthentiKit Sudan</h1>
+    <p>منصتك للتأكد من أصالة إكسسوارات الموبايل قبل ما تشتري</p>
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <h3>مصادر مباشرة من المصنّع</h3>
+        <p>منتجات توريد مباشر بدون وسطاء</p>
+    </div>
+    <div class="feature-card">
+        <h3>بوابة التحقق من الأصالة</h3>
+        <p>تأكد من منتجك في ثواني</p>
+    </div>
+    <div class="feature-card">
+        <h3>تتبّع الضمان الكامل</h3>
+        <p>سجل ضمان كل منتج محفوظ إلكترونيًا</p>
+    </div>
+</section>
+
+<section class="quick-verify">
+    <h2>تحقق من منتجك الآن</h2>
+    <input type="text" id="verify-code-input" placeholder="اكتب كود المنتج هنا">
+    <button id="verify-btn">تحقق</button>
+    <div id="verify-result"></div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'core_app/js/home.js' %}"></script>
+{% endblock %}
